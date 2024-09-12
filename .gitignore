@@ -1,40 +1,20 @@
 
-# Node modules directory
+# Dependencies
 /node_modules/
-
-# Production build directory
-/build/
-
-# Environment variables files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Miscellaneous system files
-.DS_Store
-Thumbs.db
-
-# Optional npm cache directory
-.npm
-
-# Parcel cache (if using Parcel bundler)
-/.cache/
-
-# Jest test coverage directory
-/coverage/
-
-# VSCode settings (if you use VSCode)
-.vscode/
-
-# MacOS-specific files
-*.DS_Store
-
-# Windows-specific files
-Thumbs.db
+#
+# # Production build output
+# /build/
+#
+# # Misc
+# .DS_Store
+#
+# # Environment files (if you use environment variables)
+# .env.local
+# .env.development.local
+# .env.test.local
+# .env.production.local
+#
+# # Logs
+# npm-debug.log*
+# yarn-debug.log*
+# yarn-error.log*
