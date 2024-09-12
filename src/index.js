@@ -5,10 +5,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 // Bootstrap Bundle JS
-//
-//
-
-import "mdb-react-ui-kit/dist/css/mdb.min.css";
 
 import { HashRouter as Router } from "react-router-dom";
 
