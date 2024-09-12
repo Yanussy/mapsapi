@@ -1,14 +1,15 @@
-// src/App.js
 import React from "react";
-import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import "mdb-react-ui-kit/dist/css/mdb.min.css";
+import Login from "./components/Login";
 import MapComponent from "./MapComponent";
-
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <MapComponent />
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/maps" element={<MapComponent />} />
+      </Routes>
+    </>
   );
 }
-
-export default App;
