@@ -8,7 +8,7 @@ export default function App() {
     <>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/maps" element={<MapComponent />} />
+        <Route path="/user/:email" element={<MapComponent />} />
       </Routes>
     </>
   );
