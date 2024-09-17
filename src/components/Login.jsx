@@ -10,8 +10,6 @@ import {
   MDBIcon
 } from 'mdb-react-ui-kit';
 import { Link, useNavigate } from "react-router-dom"; // Use 'useNavigate' for navigation
-import axios from 'axios';
-
 
 function Login() {
  const [email, setEmail] = useState('');
@@ -60,9 +58,9 @@ function Login() {
                 <MDBInput
                   wrapperClass='mb-4 mx-5 w-75'
                   labelClass='text-white'
-                  label='Email address'
+                  label='username'
                   id='formControlLg'
-                  type='email'
+                  type='tet'
                   size="lg"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
