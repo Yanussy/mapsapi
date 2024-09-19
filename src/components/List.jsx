@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
 import {
   MDBNavbar,
   MDBContainer,
@@ -11,7 +11,9 @@ import {
   MDBCollapse
 } from 'mdb-react-ui-kit';
 import { useParams } from "react-router-dom";
+
 function List() {
+    const [user, setUser] = useState(null);
     const { email } = useParams(); 
   const [openNavColorThird, setOpenNavColorThird] = useState(false);
   useEffect(() => {
