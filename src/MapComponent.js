@@ -10,7 +10,7 @@ import "leaflet/dist/leaflet.css";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import authService from "./services/authService"; // Import the axios service
-
+import List from "./components/List";
 const MapComponent = () => {
   const position = [51.505, -0.09]; // Default position [latitude, longitude]
   const { email } = useParams(); // Assuming you're passing user email as a param
@@ -49,7 +49,7 @@ const MapComponent = () => {
 
   return (
     <>
-      <p>{email}'s map</p>
+      <List/>
       <MapContainer
         center={position}
         zoom={13}
