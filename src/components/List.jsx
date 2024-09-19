@@ -66,13 +66,13 @@ function List() {
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href='#'>Features</MDBNavbarLink>
+                <MDBNavbarLink href='#'>Logout/in</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href='#'>Pricing</MDBNavbarLink>
+                <MDBNavbarLink href='/friends'>Friends</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href='#'>About</MDBNavbarLink>
+                <MDBNavbarLink href='#/minigame'>Minigame</MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
           </MDBCollapse>
