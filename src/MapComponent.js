@@ -11,6 +11,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import authService from "./services/authService"; // Import the axios service
 import List from "./components/List";
+import {Icon} from 'leaflet';
 const MapComponent = () => {
   const position = [51.505, -0.09]; // Default position [latitude, longitude]
   const { email } = useParams(); // Assuming you're passing user email as a param
@@ -80,7 +81,12 @@ const LocationMarker = ({ email, setLocation }) => {
         console.error("Failed to update location:", error);
       });
   };
-
+ const foodIcon = new Icon ({
+    iconUrl : 'https://img.icons8.com/doodle/48/apple.png',
+    iconSize : [35, 35], // size of the icon
+    iconAnchor : [22, 94], // point of the icon which will correspond to marker's location
+    popupAnchor : [-3, -76] // point from which the popup should open relative to the iconAnchor
+  })
   // Use map events to detect user location
   const map = useMapEvents({
     click() {
@@ -97,7 +103,7 @@ const LocationMarker = ({ email, setLocation }) => {
   });
 
   return position === null ? null : (
-    <Marker position={position}>
+    <Marker icon={foodIcon}  position={position}>
       <Popup>You are here</Popup>
     </Marker>
   );
