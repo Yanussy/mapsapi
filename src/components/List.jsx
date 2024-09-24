@@ -69,7 +69,7 @@ function List() {
                 <MDBNavbarLink href='#'>Logout/in</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href='#/user/friends'>Friends</MDBNavbarLink>
+                <MDBNavbarLink href ={`#/friends`}>Friends</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBNavbarLink href='#/minigame'>Minigame</MDBNavbarLink>

@@ -21,7 +21,7 @@ export const loginOrSignUp = async (email, password) => {
 // Fetch all user emails
 export const getAllEmails = async () => {
   try {
-    const response = await axios.get(`${API_URL}/user/friends`);
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/friends`);
     return response.data; // This will return the array of emails
   } catch (error) {
     console.error(

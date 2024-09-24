@@ -10,7 +10,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/user/:email" element={<MapComponent />} />
-        <Route path="/user/friends" element={<Friends />} />
+        <Route path="/friends" element={<Friends />} />
 
       </Routes>
     </>
