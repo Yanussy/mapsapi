@@ -95,7 +95,7 @@ const LocationMarker = ({ email, setLocation }) => {
     locationfound(e) {
       setPosition(e.latlng); // Set the location in state
       setLocation(e.latlng); // Update location in the parent state
-      map.flyTo(e.latlng, map.getZoom()); // Move the map to user's location
+      // map.flyTo(e.latlng, map.getZoom()); // Move the map to user's location
       console.log("znam kude jiveesh")
       // Call function to send location to backend
       handleLocationUpdate(e.latlng.lat, e.latlng.lng);

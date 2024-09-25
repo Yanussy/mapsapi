@@ -13,6 +13,7 @@ import {
 import { useParams } from "react-router-dom";
 
 function List() {
+
     const [user, setUser] = useState(null);
     const { email } = useParams();
   const [openNavColorThird, setOpenNavColorThird] = useState(false);
@@ -69,7 +70,7 @@ function List() {
                 <MDBNavbarLink href='#'>Logout/in</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href ={`#/friends`}>Friends</MDBNavbarLink>
+                <MDBNavbarLink href ={`#/user/${email}/friends`}>Friends</MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBNavbarLink href='#/minigame'>Minigame</MDBNavbarLink>
