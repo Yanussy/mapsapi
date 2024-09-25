@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import { MDBBtn } from 'mdb-react-ui-kit';
 
 import { useParams } from 'react-router-dom';
 
@@ -44,7 +45,12 @@ const getAllEmails = async () => {
       <h2>{userEmail}'s Friends</h2>
   <ul>
         {emails.map((email, index) => (
-          <li key={index}>{email}</li>
+          <li key={index}>{email}
+          <MDBBtn>Follow</MDBBtn>
+          
+          </li>
+          
+          
         ))}
       </ul>     
     </div>
