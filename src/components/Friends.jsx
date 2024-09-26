@@ -11,6 +11,9 @@ const Friends = () => {
   const [error, setError] = useState('');
   const [email,setEmail] = useState('');
   const [user,setUser] = useState('');
+  const [follow,setFollow] = useState('');
+
+  setFollow('follow');
 const userEmail = localStorage.getItem('userEmail');
 
 
@@ -40,13 +43,38 @@ const getAllEmails = async () => {
     fetchEmails(); // Fetch emails on component mount
   }, []);
 
+  const handleFollow = async (friendEmail ) => {
+  
+    const payload = { email , friendEmail};
+
+    try {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/followers`, payload);
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok.');
+      }
+
+      const data = await response.json();
+      setFollow('follow requested');
+      console.log('Request successful:', data);
+     // Redirect to user page
+    } catch (error) {
+      console.error('Request failed:', error.message);
+
+    }
+  };
+  
+
   return (
     <div>
       <h2>{userEmail}'s Friends</h2>
   <ul>
         {emails.map((email, index) => (
           <li key={index}>{email}
-          <MDBBtn>Follow</MDBBtn>
+          <MDBBtn 
+          onClick= {()=> handleFollow({email})}
+          >{follow}
+          </MDBBtn>
           
           </li>
           
