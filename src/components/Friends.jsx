@@ -13,7 +13,7 @@ const Friends = () => {
   const [user,setUser] = useState('');
   const [follow,setFollow] = useState('');
 
-  setFollow('follow');
+
 const userEmail = localStorage.getItem('userEmail');
 
 
@@ -55,7 +55,7 @@ const getAllEmails = async () => {
       }
 
       const data = await response.json();
-      setFollow('follow requested');
+    
       console.log('Request successful:', data);
      // Redirect to user page
     } catch (error) {
